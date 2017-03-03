@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--layout/layout_index  -->
+
+    <item name="fragment_content" type="id"></item>
+
+
+
+
+    <item name="tab_root" type="id"></item>
+    <item name="tab_main" type="id"></item>
+    <item name="tab_sale" type="id"></item>
+    <item name="tab_find" type="id"></item>
+    <item name="tab_mine" type="id"></item>
+
+
+
+    <!--  fragment_main-->
+
+    <item name="adv_pager" type="id"></item>
+    <item name="advIndicator" type="id"></item>
+    <item name="type_pager" type="id"></item>
+    <item name="typeIndicator" type="id"></item>
+    <item name="activity_zone" type="id"></item>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

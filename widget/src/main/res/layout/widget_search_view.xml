@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/widget_search_view"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="30dp"
+            android:hint="请输入商户名"
+            android:background="@drawable/widget_search_view"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_search"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            />
+
+        <ImageView
+            android:id="@+id/cancel_view"
+            android:visibility="gone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_cancel"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_textView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="搜索"
+        android:textSize="15sp"/>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_padding">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/recharge"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_new"
+                android:layout_toRightOf="@id/recharge"
+                android:layout_marginRight="@dimen/mini_margin"
+
+                />
+
+        </RelativeLayout>
+
+
+        <View style="@style/divider_vertical"/>
+
+        <TextView
+            style="@style/tools"
+            android:text="@string/express"
+            />
+        <View style="@style/divider_vertical"/>
+
+        <TextView
+            style="@style/tools"
+            android:text="@string/constellation"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/small_padding">
+
+        <TextView
+            style="@style/tools"
+            android:text="@string/phone"
+            />
+        <View style="@style/divider_vertical"/>
+
+        <TextView
+            style="@style/tools"
+            android:text="@string/air_ticket"
+            />
+        <View style="@style/divider_vertical"/>
+
+        <TextView
+            style="@style/tools"
+            android:text="@string/query"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

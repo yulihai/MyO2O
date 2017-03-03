@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--padding-->
+    <dimen name="normal_padding">15dp</dimen>
+    <dimen name="small_padding">10dp</dimen>
+    <dimen name="mini_padding">5dp</dimen>
+
+
+    <!--margin-->
+
+    <dimen name="normal_margin">15dp</dimen>
+    <dimen name="small_margin">10dp</dimen>
+    <dimen name="mini_margin">5dp</dimen>
+
+
+</resources>

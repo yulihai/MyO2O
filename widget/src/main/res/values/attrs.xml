@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MySearchView">
+        <attr name="canInput" format="boolean"></attr>
+        <attr name="hint" format="string"></attr>
+    </declare-styleable>
+
+
+
+
+
+
+</resources>

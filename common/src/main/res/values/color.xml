@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--系统主题颜色-->
+    <color name="theme_color">#FF6B37</color>
+
+    <color name="main_bg">#f8f7fb</color>
+     <!--分割线-->
+    <color name="divider">#DADADA</color>
+
+
+    <color name="grey">#939393</color>
+    <color name="grey_dark">#5F5F5F</color>
+    <color name="grey_light">#DBDBDB</color>
+
+
+    <!--basic color-->
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#323232</color>
+    <color name="green">#27D34D</color>
+
+    <color name="weekBlue">#1296db</color>
+    <color name="blue">#2A91BD</color>
+
+    <color name="weekOrange">#FF9D2F</color>
+    <color name="orange">#F45D32</color>
+
+    <color name="weekPink">#EC9490</color>
+    <color name="pink">#DA4038</color>
+
+    <color name="red">#D41409</color>
+    <color name="yellow">#EBA123</color>
+    <color name="transparent">#000000</color>
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

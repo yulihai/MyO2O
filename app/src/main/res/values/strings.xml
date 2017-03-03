@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">MyO2O</string>
+
+
+
+  <!--index_tool-->
+    <string name="main">主页</string>
+    <string name="sale">促销</string>
+    <string name="find">发现</string>
+    <string name="mine">我的</string>
+
+
+    <!--fragment_main-->
+    <string name="activity">特色活动</string>
+
+    <string name="box">便民百宝箱</string>
+
+    <string name="recharge">话费充值</string>
+    <string name="express">快递查询</string>
+    <string name="constellation">星座娱乐</string>
+    <string name="phone">便民电话</string>
+    <string name="air_ticket">机票查询</string>
+    <string name="query">违章查询</string>
+
+
+
+
+
+
+   <!--通用的-->
+    <string name="search_merchant">输入商户名</string>
+
+
+
+
+
+
+
+</resources>
