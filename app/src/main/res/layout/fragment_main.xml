@@ -11,8 +11,10 @@
         android:layout_height="wrap_content"
         android:background="@color/theme_color"
         android:padding="@dimen/small_padding"
-        app:canInput="false"
-        app:hint="@string/search_merchant" />
+        app:canInput="true"
+        app:hint="@string/search_merchant"
+
+        />
 
 
     <ScrollView
@@ -62,23 +64,28 @@
                     android:text="公告"
                     android:textColor="@color/orange"/>
 
-                <TextView
+                <com.lihai.widget.ScrollTextView
+                    android:id="@+id/notice"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="欢迎来到这里。。。。。"/>
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
 
+            <!--分割线-->
+            <View style="@style/divider_horizontal"/>
 
             <!--type_pager-->
 
-
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
                 <android.support.v4.view.ViewPager
                     android:id="@id/type_pager"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:background="@color/weekOrange"/>
+                    android:background="@color/white"/>
 
                 <com.viewpagerindicator.CirclePageIndicator
                     android:id="@id/typeIndicator"
@@ -87,6 +94,38 @@
                     android:padding="@dimen/mini_padding"
                     android:layout_alignParentBottom="true"/>
 
+            </RelativeLayout>
+
+            <!--分割线-->
+            <View style="@style/divider_horizontal"/>
+
+            <!--两张图片-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/min_margin"
+                android:layout_marginBottom="@dimen/min_margin">
+
+                <ImageView
+                    android:id="@id/image_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/blueberry"/>
+
+                <ImageView
+                    android:id="@id/image_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/pineapple"/>
+
+
+            </LinearLayout>
+
+            <!--分割线-->
+            <View style="@style/divider_horizontal"/>
 
             <!--特色活动-->
 
@@ -112,6 +151,9 @@
 
             </LinearLayout>
 
+            <!--分割线-->
+            <View style="@style/divider_horizontal"/>
+
 
             <!--便民百宝箱-->
 
@@ -131,9 +173,6 @@
                 <include layout="@layout/include_tool"/>
 
             </LinearLayout>
-
-
-
 
         </LinearLayout>
 

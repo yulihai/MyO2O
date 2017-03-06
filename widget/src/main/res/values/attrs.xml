@@ -7,8 +7,9 @@
     </declare-styleable>
 
 
-
-
+    <declare-styleable name="ScrollTextView">
+        <attr name="speed" format="integer"></attr>
+    </declare-styleable>
 
 
 </resources>

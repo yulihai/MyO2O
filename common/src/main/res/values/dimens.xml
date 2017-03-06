@@ -11,6 +11,18 @@
     <dimen name="normal_margin">15dp</dimen>
     <dimen name="small_margin">10dp</dimen>
     <dimen name="mini_margin">5dp</dimen>
+    <dimen name="min_margin">5dp</dimen>
+
+
+    <!--文字-->
+    <dimen name="large_font">16sp</dimen>
+    <dimen name="normal_font">12sp</dimen>
+    <dimen name="small_font">8sp</dimen>
+    <dimen name="mini_font">8sp</dimen>
+
+
+
+
 
 
 </resources>

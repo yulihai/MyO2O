@@ -6,9 +6,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal"
-        android:padding="@dimen/small_padding">
+        android:padding="@dimen/mini_margin"
+        >
 
         <RelativeLayout
             android:layout_width="0dp"
@@ -28,8 +29,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_new"
                 android:layout_toRightOf="@id/recharge"
-                android:layout_marginRight="@dimen/mini_margin"
-
+                android:layout_marginTop="@dimen/mini_margin"
                 />
 
         </RelativeLayout>
@@ -53,9 +53,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal"
-        android:padding="@dimen/small_padding">
+        android:padding="@dimen/mini_margin"
+        >
 
         <TextView
             style="@style/tools"

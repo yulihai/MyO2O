@@ -1,0 +1,30 @@
+<resources>
+
+
+
+
+
+
+
+    <style name="divider_vertical">
+        <!-- 分割线  竖 -->
+        <item name="android:layout_width">0.3dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+
+    <style name="divider_horizontal">
+        <!-- 分割线  横 -->
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.3dp</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+
+
+
+
+
+
+</resources>
