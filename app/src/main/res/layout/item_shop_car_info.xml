@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/small_padding"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:id="@id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="毛巾"
+        android:gravity="center"
+        android:textColor="@color/grey"/>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="@dimen/mini_padding">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+
+            <ImageView
+                android:id="@+id/money"
+                android:layout_gravity="center"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/money"/>
+
+            <TextView
+                android:id="@id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/orange"
+                android:text="186.00"
+                android:layout_toRightOf="@id/money"
+                android:paddingRight="@dimen/small_padding"
+                android:textSize="@dimen/max_font" />
+
+
+
+            <ImageButton
+                android:id="@id/minus"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/price"
+                android:background="@drawable/icon_minus_btn"/>
+
+            <TextView
+                android:id="@id/select_count"
+                android:padding="@dimen/mini_padding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/minus"
+                android:text="1"/>
+
+
+            <ImageButton
+                android:id="@id/plus"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/select_count"
+                android:background="@drawable/icon_add_btn"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

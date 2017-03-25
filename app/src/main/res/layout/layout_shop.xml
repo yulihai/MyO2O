@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!--搜索框-->
+    <com.lihai.widget.MySearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_color"
+        android:padding="@dimen/small_padding"
+        app:canInput="true"
+        app:hint="@string/search_merchant" />
+
+      <!--多条件查询view-->
+
+
+    <com.lihai.widget.SelectMenuView
+        android:id="@id/select_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/mini_padding"
+        android:orientation="vertical"/>
+
+    <View style="@style/divider_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/small_margin"
+        >
+
+        <View style="@style/divider_horizontal"/>
+    <!--数据展示区-->
+
+    <TextView
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:drawablePadding="@dimen/small_margin"
+        android:drawableLeft="@drawable/icon_hot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/hot_shop"
+        android:gravity="center_vertical"/>
+
+        <View style="@style/divider_horizontal"/>
+
+        <!--官方下拉刷新 控件-->
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@id/shop_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

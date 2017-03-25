@@ -26,4 +26,8 @@ dependencies {
     compile project(':request')
     compile project(':scan')
     compile project(':widget')
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+    compile 'cn.bingoogolapple:bga-badgeview:1.1.3@aar'
 }

@@ -9,6 +9,15 @@
 
 
 
+    <!--dialog_widget_layout-->
+    <item name="title" type="id"></item>
+    <item name="msg" type="id"></item>
+    <item name="btnRoot" type="id"></item>
+    <item name="leftBtn" type="id"></item>
+    <item name="rightBtn" type="id"></item>
+
+
+
 
 
 

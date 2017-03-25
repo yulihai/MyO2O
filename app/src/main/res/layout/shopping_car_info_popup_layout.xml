@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:orientation="vertical"
+    android:id="@+id/shopping_car_info_root">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_padding"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购物车"
+            android:textSize="@dimen/large_font"
+            android:textColor="@color/grey"/>
+
+        <TextView
+            android:id="@id/clean_all_shopInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/icon_clean"
+            android:drawablePadding="@dimen/mini_padding"
+            android:text="清除全部"
+            android:textSize="@dimen/large_font" />
+
+    </RelativeLayout>
+
+    <View style="@style/divider_horizontal"/>
+
+    <ListView
+        android:id="@id/shop_car_info_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+</LinearLayout>

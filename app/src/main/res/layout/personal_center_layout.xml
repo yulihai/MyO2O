@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@id/personal_info"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@id/header"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/min_margin"
+                    android:src="@drawable/default_photo" />
+
+
+                <TextView
+                    android:id="@id/name_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/image_into"
+                    android:layout_toEndOf="@id/header"
+                    android:layout_toRightOf="@id/header"
+                    android:paddingBottom="@dimen/mini_padding"
+                    android:paddingLeft="@dimen/mini_padding"
+                    android:text="刘强峰"
+                    android:textSize="@dimen/normal_font" />
+
+                <TextView
+                    android:id="@id/phone_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_into"
+                    android:layout_toEndOf="@id/header"
+                    android:layout_toRightOf="@id/header"
+                    android:paddingLeft="@dimen/mini_padding"
+                    android:text="15915789358"
+                    android:textSize="@dimen/normal_font" />
+
+                <ImageView
+                    android:id="@id/image_into"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/right_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/mini_padding">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="20dp"
+                        android:paddingLeft="6dp"
+                        android:src="@drawable/index_person_01" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:text="@string/discount_coupon"
+                        android:textSize="@dimen/max_font" />
+
+                </LinearLayout>
+
+
+                <View style="@style/divider_vertical" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/mini_padding">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:src="@drawable/index_person_02" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/small_margin"
+                        android:text="@string/integral"
+                        android:textSize="@dimen/max_font" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/mini_padding"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/orange" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/address_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/address_ImgV"
+                    android:text="@string/information"
+                    android:textSize="13sp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/address_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_03" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/address_ImgV"
+                    android:text="@string/location_manage"
+                    android:textSize="13sp"
+
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/treasure_chest_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_04" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/treasure_chest_ImgV"
+                    android:text="@string/treasure_chest"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/my_indent_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_05" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/my_indent_ImgV"
+                    android:text="@string/my_indent"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/dial_record_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_06" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/dial_record_ImgV"
+                    android:text="@string/dialing_record"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <View style="@style/divider_horizontal" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/my_recommend_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_07" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/my_recommend_ImgV"
+                    android:text="@string/my_recommend"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/everyday_recommend_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_08" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/everyday_recommend_ImgV"
+                    android:text="@string/everyday_recommend"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/my_collect_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_09" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/my_collect_ImgV"
+                    android:text="@string/my_collect"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/my_activity_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_10" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/my_activity_ImgV"
+                    android:text="@string/my_activity"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/setting_up_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/setting_up_ImgV"
+                    android:text="@string/setting_up"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divider_horizontal" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@id/security_exit_ImgV"
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/index_person_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@id/security_exit_ImgV"
+                    android:text="@string/dial_hot_line"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/small_padding"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mini_margin"
+                    android:src="@drawable/right_arrow" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/small_padding"
+    android:layout_marginBottom="@dimen/mini_margin">
+
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:id="@id/shop_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/small_padding"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/shop_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一方易购"
+                android:textSize="@dimen/large_font"
+                android:layout_marginRight="@dimen/small_margin"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <RatingBar
+                android:id="@+id/score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:max="5"
+                android:stepSize="1"
+                style="@style/MyRatingBar"
+                android:layout_marginRight="@dimen/small_margin"/>
+
+            <TextView
+                android:id="@+id/commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12条评论"
+                android:textSize="@dimen/mini_font"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/typeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="美食"
+                android:textSize="@dimen/max_font"
+                android:textColor="@color/orange"
+                android:paddingRight="@dimen/small_padding"/>
+
+            <View style="@style/divider_vertical"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="免费配送"
+                android:textSize="@dimen/normal_font"
+                android:paddingLeft="@dimen/small_padding"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_chat"
+            android:padding="@dimen/mini_padding"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/icon_map"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/mini_margin"
+            />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:text="100米"
+            android:textSize="@dimen/small_font"
+            android:layout_alignParentBottom="true"
+           android:layout_toRightOf="@id/map"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

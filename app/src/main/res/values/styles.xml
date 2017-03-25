@@ -20,16 +20,13 @@
     </style>
 
 
-    <style name="divider_vertical">
-        <!-- 分割线 -->
-        <item name="android:layout_width">0.3dp</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:background">@color/divider</item>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <!-- item_shop -->
+        <item name="android:progressDrawable">@drawable/ratingbar_drawable</item>
+        <item name="android:minHeight">15dip</item>
+        <item name="android:maxHeight">15dip</item>
     </style>
-
-
-
-
 
 
 

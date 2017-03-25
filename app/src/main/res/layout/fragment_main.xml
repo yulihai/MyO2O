@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/main_bg">
+    android:background="@color/main_bg"
+    android:orientation="vertical">
 
     <com.lihai.widget.MySearchView
         android:layout_width="match_parent"
@@ -12,172 +12,187 @@
         android:background="@color/theme_color"
         android:padding="@dimen/small_padding"
         app:canInput="true"
-        app:hint="@string/search_merchant"
-
-        />
+        app:hint="@string/search_merchant" />
 
 
-    <ScrollView
+
+
+    <!--官方下拉刷新 控件-->
+    <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@id/swipe_refresh">
 
-        <!--adv_pager-->
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-
-                <android.support.v4.view.ViewPager
-                    android:id="@id/adv_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp" />
-
-                <com.viewpagerindicator.CirclePageIndicator
-                    android:id="@id/advIndicator"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="3dp"
-                    android:layout_alignParentBottom="true"/>
-
-            </RelativeLayout>
-
-            <!--公告-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/mini_padding"
-                android:gravity="center">
-
-                <TextView
-                    android:drawableLeft="@drawable/icon_notice"
-                    android:drawablePadding="@dimen/mini_padding"
-                    android:layout_marginRight="@dimen/mini_padding"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="公告"
-                    android:textColor="@color/orange"/>
-
-                <com.lihai.widget.ScrollTextView
-                    android:id="@+id/notice"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-
-            </LinearLayout>
-
-
-            <!--分割线-->
-            <View style="@style/divider_horizontal"/>
-
-            <!--type_pager-->
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
-                <android.support.v4.view.ViewPager
-                    android:id="@id/type_pager"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:background="@color/white"/>
-
-                <com.viewpagerindicator.CirclePageIndicator
-                    android:id="@id/typeIndicator"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/mini_padding"
-                    android:layout_alignParentBottom="true"/>
-
-            </RelativeLayout>
-
-            <!--分割线-->
-            <View style="@style/divider_horizontal"/>
-
-            <!--两张图片-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/min_margin"
-                android:layout_marginBottom="@dimen/min_margin">
-
-                <ImageView
-                    android:id="@id/image_1"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/blueberry"/>
-
-                <ImageView
-                    android:id="@id/image_2"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/pineapple"/>
-
-
-            </LinearLayout>
-
-            <!--分割线-->
-            <View style="@style/divider_horizontal"/>
-
-            <!--特色活动-->
-
+            <!--adv_pager-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/icon_red"
-                    android:drawablePadding="@dimen/small_padding"
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@id/adv_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@id/advIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:padding="3dp" />
+
+                </RelativeLayout>
+
+                <!--公告-->
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/activity"/>
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/mini_padding">
 
-                <ImageView
-                    android:id="@id/activity_zone"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/mini_padding"
+                        android:drawableLeft="@drawable/icon_notice"
+                        android:drawablePadding="@dimen/mini_padding"
+                        android:text="公告"
+                        android:textColor="@color/orange" />
+
+                    <com.lihai.widget.ScrollTextView
+                        android:id="@+id/notice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <!--分割线-->
+                <View style="@style/divider_horizontal" />
+
+                <!--type_pager-->
+
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:src="@drawable/empty_photo"
-                    />
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@id/type_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@color/white" />
+
+                    <com.viewpagerindicator.CirclePageIndicator
+                        android:id="@id/typeIndicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:padding="@dimen/mini_padding" />
+
+                </RelativeLayout>
+
+                <!--分割线-->
+                <View style="@style/divider_horizontal" />
+
+                <!--两张图片-->
+                <LinearLayout
+                    android:id="@+id/two_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="@dimen/min_margin"
+                    android:layout_marginTop="@dimen/min_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@id/image_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/blueberry" />
+
+                    <ImageView
+                        android:id="@id/image_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/pineapple" />
+
+
+                </LinearLayout>
+
+                <!--分割线-->
+                <View style="@style/divider_horizontal" />
+
+                <!--特色活动-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_red"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:gravity="center_vertical"
+                        android:text="@string/activity" />
+                    <!--分割线-->
+                    <View style="@style/divider_horizontal" />
+
+                    <ImageView
+                        android:id="@id/activity_zone"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:paddingBottom="@dimen/mini_padding"
+                        android:paddingTop="@dimen/mini_padding"
+                        android:src="@drawable/empty_photo" />
+
+
+                </LinearLayout>
+
+                <!--分割线-->
+                <View style="@style/divider_horizontal" />
+
+
+                <!--便民百宝箱-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/icon_yellow"
+                        android:drawablePadding="@dimen/small_padding"
+                        android:gravity="center_vertical"
+                        android:text="@string/box" />
+
+                    <!--分割线-->
+                    <View style="@style/divider_horizontal" />
+
+                    <include layout="@layout/include_tool" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--分割线-->
-            <View style="@style/divider_horizontal"/>
+        </ScrollView>
 
-
-            <!--便民百宝箱-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:gravity="center_vertical"
-                    android:drawableLeft="@drawable/icon_yellow"
-                    android:drawablePadding="@dimen/small_padding"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/box"/>
-
-                <include layout="@layout/include_tool"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-
-    </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 
 </LinearLayout>

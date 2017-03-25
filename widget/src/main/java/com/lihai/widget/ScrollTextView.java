@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Handler;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,12 +22,12 @@ public class ScrollTextView extends TextSwitcher implements ViewSwitcher.ViewFac
 
     int speed; //速度
 
-    List<String> notices;
+    List<String> notices = new ArrayList<String>();
     int count;
 
+    int lastPosition;
     Handler handler;
-
-
+    Thread thread;
 
     public ScrollTextView(Context context) {
         this(context,null);
@@ -49,36 +51,49 @@ public class ScrollTextView extends TextSwitcher implements ViewSwitcher.ViewFac
     }
 
 
+    public void clear(){
+        notices.clear();
+    }
+
+
     /**
      * 设置数据
      * @param notices
      */
-    public void setDate(List<String> notices){
+    public void setDate(final List<String> notices){
 
         if (notices == null || notices.isEmpty()){
             return;
         }
 
-        this.notices = notices;
+        this.notices.addAll(notices)  ;
         this.count = notices.size();
         handler = new Handler();
-        handler.postDelayed(runnable,0);
+
+        if(thread != null && thread.isAlive()){
+           thread.interrupt();
+        }else {
+            thread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    handler.postDelayed(this,speed);
+                    if (notices.size() == 0){
+                        return;
+                    }
+                    setText(notices.get(lastPosition));  //给TextView 设值
+                    lastPosition = lastPosition+1;
+                    if (lastPosition == count){     //lastPosition == count 时，设lastPosition = 0 ，继续循环。
+                        lastPosition = 0;
+                    }
+                }
+            });
+        }
+        handler.postDelayed(thread,0);
+
     }
 
 
-    int lastPosition;
 
-    Runnable runnable = new Runnable() {
-        @Override
-        public void run() {
-            handler.postDelayed(this,speed);
-            setText(notices.get(lastPosition));  //给TextView 设值
-            lastPosition = lastPosition+1;
-            if (lastPosition == count){     //lastPosition == count 时，设lastPosition = 0 ，继续循环。
-                lastPosition = 0;
-            }
-        }
-    };
 
 
 

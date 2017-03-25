@@ -5,6 +5,7 @@
     <!--layout/layout_index  -->
 
     <item name="fragment_content" type="id"></item>
+    <item name="index_viewpager" type="id"></item>
 
 
 
@@ -24,10 +25,129 @@
     <item name="type_pager" type="id"></item>
     <item name="typeIndicator" type="id"></item>
     <item name="activity_zone" type="id"></item>
+    <item name="swipe_refresh" type="id"></item>
+
 
 
     <item name="image_1" type="id"></item>
     <item name="image_2" type="id"></item>
+
+
+    <!--layout/layout_shop-->
+    <item name="shop_list_view" type="id"></item>
+    <item name="select_menu" type="id"></item>
+    select_menu
+
+    <!--item_shop-->
+    shop_icon
+    <item name="shop_icon" type="id"></item>
+    <item name="shop_name" type="id"></item>
+    <item name="score" type="id"></item>
+    <item name="commentCount" type="id"></item>
+    <item name="typeName" type="id"></item>
+    <item name="money" type="id"></item>
+    <item name="map" type="id"></item>
+    <item name="distance" type="id"></item>
+
+<!--layout/item_filter-->
+    <item name="item_filter" type="id"></item>
+
+
+
+    <!--layout/include_shopping_car-->
+    <item name="shopping_car" type="id"></item>
+    <item name="total" type="id"></item>
+    <item name="shopping_info" type="id"></item>
+    <item name="operation" type="id"></item>
+
+
+    <!--layout/layout_shop_info-->
+    <item name="shop_pic" type="id"></item>
+    <item name="product_type_list_view" type="id"></item>
+    <item name="product_list_view" type="id"></item>
+    <item name="shop_logo" type="id"></item>
+    <item name="collect" type="id"></item>
+
+    <!--layout/item_product_type-->
+    <item name="type_name" type="id"></item>
+
+
+    <!--layout/item_product-->
+    <item name="product_pic" type="id"></item>
+    <item name="product_name" type="id"></item>
+    <item name="sale_count" type="id"></item>
+    <item name="minus" type="id"></item>
+    <item name="select_count" type="id"></item>
+    <item name="plus" type="id"></item>
+    <item name="price" type="id"></item>
+
+
+
+    <!--layout/layout_about_us-->
+    <item name="exit_Img" type="id"></item>
+    <item name="header" type="id"></item>
+    <item name="exit_Btn" type="id"></item>
+
+
+
+    <!--layout/layout_popup_select_img-->
+    <item name="openCamera" type="id"></item>
+    <item name="openCapture" type="id"></item>
+    <item name="cancel" type="id"></item>
+
+
+
+    <!--layout/personal_center_layout-->
+    <item name="personal_info" type="id"></item>
+    <item name="name_TV" type="id"></item>
+    <item name="phone_TV" type="id"></item>
+    <item name="image_into" type="id"></item>
+    <item name="address_ImgV" type="id"></item>
+    <item name="treasure_chest_ImgV" type="id"></item>
+    <item name="my_indent_ImgV" type="id"></item>
+    <item name="dial_record_ImgV" type="id"></item>
+    <item name="my_recommend_ImgV" type="id"></item>
+    <item name="everyday_recommend_ImgV" type="id"></item>
+    <item name="my_collect_ImgV" type="id"></item>
+    <item name="my_activity_ImgV" type="id"></item>
+    <item name="setting_up_ImgV" type="id"></item>
+    <item name="security_exit_ImgV" type="id"></item>
+
+
+
+
+    <!--layout/shopping_car_info_popup_layout-->
+    <item name="clean_all_shopInfo" type="id"></item>
+    <item name="shop_car_info_listView" type="id"></item>
+
+
+
+    <!--layout/layout_search_page-->
+    <item name="search_page_list_view" type="id"></item>
+    <item name="clean_history" type="id"></item>
+
+
+
+    <!--layout_login_activity/layout_register_activity-->
+    <item name="loginName" type="id"/>
+    <item name="password" type="id"/>
+    <item name="register" type="id"/>
+    <item name="findPassword" type="id"/>
+    <item name="log_in" type="id"/>
+
+    <item name="getCaptcha" type="id"/>
+    <item name="note_securityCode" type="id"/>
+
+    <item name="nickname" type="id"/>
+    <item name="invitationCode" type="id"/>
+    <item name="newPassword" type="id"/>
+    <item name="location" type="id"/>
+    <item name="agreement" type="id"/>
+    <item name="finish" type="id"/>
+
+
+
+
 
 
 

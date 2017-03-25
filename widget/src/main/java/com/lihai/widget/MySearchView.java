@@ -1,6 +1,7 @@
 package com.lihai.widget;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -40,24 +41,15 @@ public class MySearchView extends LinearLayout implements View.OnClickListener, 
     public MySearchView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        LayoutInflater.from(context).inflate(R.layout.widget_search_view,this);
-        TypedArray typedArray = context.obtainStyledAttributes(attrs,R.styleable.MySearchView);
-        canInput = typedArray.getBoolean(R.styleable.MySearchView_canInput,false);
-        typedArray.recycle();
-
-
-
+        LayoutInflater.from(context).inflate(R.layout.widget_search_view, this);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.MySearchView);
+        canInput = typedArray.getBoolean(R.styleable.MySearchView_canInput, false);
+        typedArray.recycle();  //回收
 
         editText = (EditText) findViewById(R.id.edit_text);
-        editText.addTextChangedListener(this);
-
-
-
-        //TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,12,getResources().getDisplayMetrics());  sp 转 dp
-       // TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,12,getResources().getDisplayMetrics()); // sp 转 px
-
-
         editText.setTextSize(14);
+        editText.addTextChangedListener(this);
+       // editText.setOnClickListener(this);
 
         cancelView = (ImageView) findViewById(R.id.cancel_view);
         cancelView.setOnClickListener(this);
@@ -69,7 +61,6 @@ public class MySearchView extends LinearLayout implements View.OnClickListener, 
         if (!canInput){
             editText.setEnabled(false);
         }
-
 
     }
 
@@ -93,12 +84,16 @@ public class MySearchView extends LinearLayout implements View.OnClickListener, 
 
         if (id == R.id.cancel_view) {
             editText.setText("");
+        }else if (id == R.id.search_textView){
+
+            //TODO
+
         }
 
     }
 
-    //editText 输入触动
 
+    //editText 输入触动
     @Override
     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -112,13 +107,17 @@ public class MySearchView extends LinearLayout implements View.OnClickListener, 
     @Override
     public void afterTextChanged(Editable s) {
 
-        if (TextUtils.isEmpty(editText.getText().toString())){
+        if (TextUtils.isEmpty(editText.getText().toString())) {
             cancelView.setVisibility(GONE);
-        }else {
+        } else {
             cancelView.setVisibility(VISIBLE);
         }
 
     }
 
-    ///..................................////
 }
+
+
+
+//TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,12,getResources().getDisplayMetrics());  sp 转 dp
+// TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_PX,12,getResources().getDisplayMetrics()); // sp 转 px

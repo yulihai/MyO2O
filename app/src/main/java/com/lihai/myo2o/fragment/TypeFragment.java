@@ -1,5 +1,6 @@
 package com.lihai.myo2o.fragment;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,21 +10,34 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.lihai.common.adapter.MyAdapter;
 import com.lihai.common.base.BaseFragment;
 import com.lihai.myo2o.R;
+import com.lihai.myo2o.activity.ShopActivity;
 import com.lihai.myo2o.damain.ShopType;
+import com.lihai.request.utils.JsonUtil;
+import com.lihai.request.utils.RequestUtil;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by LiHai on 2017/3/2.
  */
 public class TypeFragment extends BaseFragment {
 
+    public static final String DATA_KEY = "shopClassId";
+
     List<ShopType> shopTypes;
 
+    List<Map<String , Object>> data  = new ArrayList<>();
+
     GridView typeGridView;
+
+    MyAdapter myAdapter;
 
     public void setDate(List<ShopType> shopTypes){
 
@@ -41,10 +55,37 @@ public class TypeFragment extends BaseFragment {
 
         //数据
         typeGridView = (GridView) view.findViewById(R.id.type_grid);
-        MyAdapter myAdapter = new MyAdapter(shopTypes);
+        // myAdapter = new MyAdapter(activity,data,R.layout.gridview_item,new String[] {"pic","name"},new int[] {R.id.pic,R.id.name});
+        myAdapter = new MyAdapter(shopTypes);
         typeGridView.setAdapter(myAdapter);
+       // getData();
 
     }
+
+
+   /* private void getData(){
+       // Map<String ,String> params = new HashMap<>();
+       // params.put("shopTypeId" ,shopTypeId);
+
+        RequestUtil.post("http://testwxys.rhy.com/index?longitude=123.93&latitude=41.88&_=1488543327000",null,null,false, new RequestUtil.MyCallBack() {
+            @Override
+            public void onSuccess(Map<String, Object> result) {
+
+                String dataStr = result.get("data") +"";
+                Map<String ,Object> dataMap = JsonUtil.jsonToOject(dataStr);
+
+
+                List<Map<String ,Object>> resultData = (List<Map<String, Object>>) dataMap.get("shopClass");
+                data.addAll(resultData);
+                myAdapter.notifyDataSetChanged();// 刷新
+
+            }
+
+            @Override
+            public void onFailure(String error) {
+            }
+        });
+    }*/
 
 
     private class MyAdapter extends BaseAdapter implements View.OnClickListener {
@@ -57,7 +98,7 @@ public class TypeFragment extends BaseFragment {
 
         @Override
         public int getCount() {
-            return shopTypes.size();
+            return shopTypes == null? 0: shopTypes.size();
         }
 
         @Override
@@ -97,7 +138,9 @@ public class TypeFragment extends BaseFragment {
         @Override
         public void onClick(View v) {
 
-            Toast.makeText(activity,"我被点击了" ,Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(activity, ShopActivity.class);
+            intent.putExtra(DATA_KEY,v.getTag()+ "");
+            startActivity(intent);
 
         }
     }

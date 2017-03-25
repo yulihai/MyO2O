@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-
+//FragmentStatePagerAdapter
 
 public abstract class MyFragmentPagerAdapter extends PagerAdapter {
     private static final String TAG = "FragmentPagerAdapter";

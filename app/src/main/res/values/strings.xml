@@ -24,11 +24,90 @@
 
 
 
+    <!--personal_center_layout-->
+
+    <string name="discount_coupon">优惠券</string>
+    <string name="integral">积分</string>
+    <string name="information">消息</string>
+    <string name="location_manage">地址管理</string>
+    <string name="treasure_chest">便民百宝箱</string>
+    <string name="my_indent">我的订单</string>
+    <string name="dialing_record">拨号记录</string>
+    <string name="my_recommend">我的推荐</string>
+    <string name="everyday_recommend">每日推荐</string>
+    <string name="my_collect">我的收藏</string>
+    <string name="my_activity">我的活动</string>
+    <string name="setting_up">设置</string>
+    <string name="dial_hot_line">拨打热线</string>
+
+
+    <!--layout_search_page-->
+
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">历史搜索</string>
+    <string name="clean_history_record">清空历史记录</string>
+
+
+
+    <!--layout_about_us-->
+    <string name="personal_information">个人信息</string>
+    <string name="head_portrait">头像</string>
+    <string name="user_name">用户名</string>
+    <string name="cell_phone_number">手机号</string>
+    <string name="the_area">所在地区</string>
+    <string name="change_password">修改登录密码</string>
+    <string name="save">保存</string>
+
+
+    <!--layout_login_activity/layout_register_activity-->
+    <string name="loginName">帐号：</string>
+    <string name="password">密码：</string>
+    <string name="hintLoginName">请输入手机号</string>
+    <string name="hintPassword">6-20位字母、数字组合</string>
+
+    <string name="login">登录</string>
+    <string name="logout">注销</string>
+
+    <string name="nickname">昵称：</string>
+    <string name="phoneNum">手机号：</string>
+    <string name="captcha">验证码：</string>
+    <string name="location">所在地所：</string>
+
+
+    <string name="hintNickname">请填写用户昵称</string>
+    <string name="hintPhoneNum">请填写注册手机号码</string>
+    <string name="hintCaptcha">请输入短信验证码</string>
+    <string name="getCaptcha">获取验证码</string>
+    <string name="hintLocation">省/市/(县/区)</string>
+    <string name="hintInvitationCode">如果有邀请码请输入</string>
+    <string name="register">注册</string>
+    <string name="user_agreement">《用户协议》</string>
+    <string name="agreement">我已经阅读并同意</string>
+
+
+    <string name="newPassword">新密码:</string>
+    <string name="invitationCode">邀请码:</string>
+
+
+    <string name="quick_register">手机快速注册</string>
+    <string name="findPassword">找回密码</string>
+
+    <string name="accomplish">完成</string>
+
+
 
 
 
    <!--通用的-->
     <string name="search_merchant">输入商户名</string>
+
+    <string name="hot_shop">热门店铺</string>
+
+    <string name="connection_merchant">联系商家</string>
+
+    <string name="sign_in">签到赚积分</string>
+
+
 
 
 
